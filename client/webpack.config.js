@@ -26,17 +26,17 @@ module.exports = () => {
       new MiniCssExtractPlugin(),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'service-worker.js',
+        swDest: 'src-sw.js',
       }),
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'Text Editor',
+        name: 'Text-Editor',
         short_name: 'TextEd',
         description: 'Put your texts here',
         background_color: '#225ca3',
         theme_color: '#225ca3',
-        start_url: '/',
+        start_url: '/dist/index.thml',
         publicPath: '/',
         icons: [
           {
